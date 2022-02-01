@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Knicknack';
+    src: url('Knicknack-Bold.eot');
+    src: local('Knicknack Bold'), local('Knicknack-Bold'),
+        url('Knicknack-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-Bold.woff2') format('woff2'),
+        url('Knicknack-Bold.woff') format('woff'),
+        url('Knicknack-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack Fuzzy';
+    src: url('Knicknack-FuzzyBold.eot');
+    src: local('Knicknack Fuzzy Bold'), local('Knicknack-FuzzyBold'),
+        url('Knicknack-FuzzyBold.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-FuzzyBold.woff2') format('woff2'),
+        url('Knicknack-FuzzyBold.woff') format('woff'),
+        url('Knicknack-FuzzyBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack';
+    src: url('Knicknack-Regular.eot');
+    src: local('Knicknack Regular'), local('Knicknack-Regular'),
+        url('Knicknack-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-Regular.woff2') format('woff2'),
+        url('Knicknack-Regular.woff') format('woff'),
+        url('Knicknack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack Fuzzy';
+    src: url('Knicknack-FuzzyMedium.eot');
+    src: local('Knicknack Fuzzy Medium'), local('Knicknack-FuzzyMedium'),
+        url('Knicknack-FuzzyMedium.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-FuzzyMedium.woff2') format('woff2'),
+        url('Knicknack-FuzzyMedium.woff') format('woff'),
+        url('Knicknack-FuzzyMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack';
+    src: url('Knicknack-Medium.eot');
+    src: local('Knicknack Medium'), local('Knicknack-Medium'),
+        url('Knicknack-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-Medium.woff2') format('woff2'),
+        url('Knicknack-Medium.woff') format('woff'),
+        url('Knicknack-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack';
+    src: url('Knicknack-Heavy.eot');
+    src: local('Knicknack Heavy'), local('Knicknack-Heavy'),
+        url('Knicknack-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-Heavy.woff2') format('woff2'),
+        url('Knicknack-Heavy.woff') format('woff'),
+        url('Knicknack-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack Fuzzy';
+    src: url('Knicknack-FuzzyRegular.eot');
+    src: local('Knicknack Fuzzy Regular'), local('Knicknack-FuzzyRegular'),
+        url('Knicknack-FuzzyRegular.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-FuzzyRegular.woff2') format('woff2'),
+        url('Knicknack-FuzzyRegular.woff') format('woff'),
+        url('Knicknack-FuzzyRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack Fuzzy';
+    src: url('Knicknack-FuzzyHeavy.eot');
+    src: local('Knicknack Fuzzy Heavy'), local('Knicknack-FuzzyHeavy'),
+        url('Knicknack-FuzzyHeavy.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-FuzzyHeavy.woff2') format('woff2'),
+        url('Knicknack-FuzzyHeavy.woff') format('woff'),
+        url('Knicknack-FuzzyHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack Fuzzy';
+    src: url('Knicknack-FuzzyBlack.eot');
+    src: local('Knicknack Fuzzy Black'), local('Knicknack-FuzzyBlack'),
+        url('Knicknack-FuzzyBlack.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-FuzzyBlack.woff2') format('woff2'),
+        url('Knicknack-FuzzyBlack.woff') format('woff'),
+        url('Knicknack-FuzzyBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knicknack';
+    src: url('Knicknack-Black.eot');
+    src: local('Knicknack Black'), local('Knicknack-Black'),
+        url('Knicknack-Black.eot?#iefix') format('embedded-opentype'),
+        url('Knicknack-Black.woff2') format('woff2'),
+        url('Knicknack-Black.woff') format('woff'),
+        url('Knicknack-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
