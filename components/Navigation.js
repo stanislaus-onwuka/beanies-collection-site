@@ -26,7 +26,9 @@ export default function Navigation() {
                         <img src="/assets/svgs/Twitter.svg" alt="Twitter"/>
                     </a>
                 </div>
-                <Link href="/mint">Connect Wallet</Link>
+                <div className={styles.connectWalletBtn}>
+                    <Link href="/mint">Connect Wallet</Link>
+                </div>
             </div>
             <button className={styles.mobileMenuBtn}>
                 menu

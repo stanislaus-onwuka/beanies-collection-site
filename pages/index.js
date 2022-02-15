@@ -5,6 +5,7 @@ import Navigation from '@components/Navigation'
 import Profile from '@components/Profile'
 import { teamData, faqsData } from '../data'
 import Faq from '@components/Faq'
+import Gallery from '@components/Gallery'
 
 export default function Home({team,faqs}) {
   return (
@@ -23,21 +24,21 @@ export default function Home({team,faqs}) {
               <p>The beanies might return to make all the jellybeans in the universe “life”, who knows?</p>
             </div>
             <div className={styles.mintInfoContainer}>
-              <Link href="/mint" className={styles.mintPageBtn}>Mint now</Link>
+              <div className={styles.mintPageBtn}>
+                <Link href="/mint">Mint now</Link>
+              </div>
               <p className={styles.mintPrice}>Price : 0.3eth + Gas</p>
             </div>
           </div>
           <div className={styles.heroImg}>
-
+            <img src="/assets/pngs/header-beanie.png" alt="Beanie"/>
           </div>
         </div>
       </header>
       <main>
         <section className={styles.galleryContainer}>
           <h2 className={styles.galleryContainerTitle}>Gallery</h2>
-          <div className={styles.gallery}>
-
-          </div>
+          <Gallery/>
         </section>
         <section className={styles.thePlanContainer}>
           <h2 className={styles.thePlanContainerTitle}>The plan</h2>
@@ -96,7 +97,7 @@ export default function Home({team,faqs}) {
               <h2 className={styles.waitingListFormTitle}>Join our waiting list</h2>
               <p className={styles.waitingListFormSubtitle}>To stay updated on new information about the collection. Join our mailing list.</p>
               <form className={styles.waitingListForm}>
-                <input type="text" name="waiting-list-input" className={styles.waitingListInput} required />
+                <input type="text" name="waiting-list-input" placeholder='Your Email' className={styles.waitingListInput} required />
                 <input type="submit" value="Submit" className={styles.waitingListFormSubmitBtn} />
               </form>
             </div>

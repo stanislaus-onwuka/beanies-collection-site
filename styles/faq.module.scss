@@ -1,0 +1,28 @@
+.faqContainer{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 5px solid #000000;
+    border-radius: 16px;
+    width: 100%;
+    margin: 2rem 0;
+
+
+    .faqTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        cursor: pointer;
+
+        .faqTitleText{
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 51px;
+            text-align: center;
+            color: #231F20;
+        }
+
+    }
+}

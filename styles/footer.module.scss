@@ -1,12 +1,35 @@
 .footer {
-    width: 100%;
-    height: 100px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 2rem 0 4rem 0;
 
-    .logo {
-        height: 1em;
-        margin: 5px;
+    .footerLogo{
+        max-width: 316px;
     }
+
+    .contractAddress{
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 51px;
+        text-align: center;
+        margin: 3rem 0;
+        color: #FFFFFF;
+
+        a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+    }
+
+    .footerSocialsContainer{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+
+        .socialLink{
+            margin: 0 1rem;
+        }
+    }
+
 }

@@ -46,3 +46,56 @@ export const faqsData = [
         faqBody: ""
     },
 ]
+
+export const beaniesGallery = [
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 2,
+        name: "2",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+    {
+        id: 1,
+        name: "1",
+        imgSrc: "/assets/pngs/gallery/1.png"
+    },
+]

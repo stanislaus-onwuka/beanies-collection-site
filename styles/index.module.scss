@@ -1,3 +1,317 @@
-.description{
-    font-size: 20px;
+.homepageContainer{
+    header{
+        .heroContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding: 3rem;
+
+            .hero{
+                display: flex;
+                flex-direction: column;
+                max-width: 55%;
+
+                .heroTitle{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 64px;
+                    line-height: 90px;
+                    color: #D8FFB7;
+                }
+
+                .heroParagraphs{
+                    margin-top: 1rem;
+                    
+                    p{
+                        font-weight: normal;
+                        font-size: 32px;
+                        line-height: 45px;
+                        color: #FFFFFF;
+                        margin: 1.5rem 0;
+                    }
+                }
+
+                .mintInfoContainer{
+                    width: 100%;
+                    margin-top: 4rem;
+
+                    .mintPageBtn{
+                        a{
+                            font-weight: 500;
+                            font-size: 32px;
+                            line-height: 68px;
+                            text-align: center;
+                            color: #FFFFFF;
+                            text-decoration: none;
+                            background: #FA8029;
+                            border: 0.5px solid #000000;
+                            box-sizing: border-box;
+                            border-radius: 10px;
+                            padding: 0.5rem 3rem;
+                            width: 100%;
+                            transition: 0.2s;
+
+                            &:hover{
+                                background: #c46521;
+
+                            }
+
+
+                        }
+                    }
+
+                    .mintPrice{
+                        margin: 0.4rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 51px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+
+            .heroImg{
+                display: block;
+                position: relative;
+                max-width: 512px;
+                background: #99FFD3;
+                border: 10px solid #000000;
+                box-sizing: border-box;
+                border-radius: 24px;
+                width: 100%;
+                max-height: 512px;
+
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    main{
+        margin: 3rem 0;
+
+        .galleryContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .galleryContainerTitle{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 96px;
+                line-height: 135px;
+                text-align: center;
+                color: #FF8934;
+                text-transform: uppercase;
+
+            }
+        }
+
+        .thePlanContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem auto;
+            width: 100%;
+
+            .thePlanContainerTitle{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 96px;
+                line-height: 135px;
+                text-align: center;
+                color: #FF8934;
+                text-transform: uppercase;
+            }
+
+            .planDesktopView{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: 7rem 3rem;
+                width: 100%;
+
+                .planOneContainer{
+                    align-self: center;
+                    margin-left: 2rem;
+                }
+
+                .jarOfBeansContainer{
+                    min-width: 498px;
+                    margin: 0 1.5rem;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .plansContainer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .plan{
+                    margin: 1rem;
+
+                    .planTitle{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 60px;
+                        line-height: 101px;
+                        color: #D8FFB7;
+                    }
+
+                    .planSubtitle{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 20px;
+                        line-height: 28px;
+                        color: #FFFFFF;
+                        margin: 0.5rem 0;
+                        width: 95%;
+                    }
+                }
+            }
+        }
+
+        .teamContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 7rem 0;
+
+
+            .teamContainerTitle{
+                font-weight: normal;
+                font-size: 96px;
+                line-height: 135px;
+                text-align: center;
+                color: #FF8934;
+                text-transform: uppercase;
+            }
+
+
+            .teamMembers{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 5rem 0;
+            }
+        }
+
+        .faqsContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .faqsContainerTitle{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 96px;
+                line-height: 135px;
+                text-align: center;
+                color: #FF9244;
+                text-transform: uppercase;
+            }
+
+            .faqsList{
+                margin: 7rem 1rem;
+                width: 90%;
+            }
+        }
+
+        .waitingListContainer{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 2rem 3rem;
+            margin: 7rem 0;
+
+            .waitingList{
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                background: #E6FFD1;
+                border: 10px solid #231F20;
+                border-radius: 24px;
+                
+
+                .waitingListFormContainer{
+                    width: 70%;
+                    padding: 2rem;
+                    .waitingListFormTitle{
+                        font-weight: normal;
+                        font-size: 64px;
+                        line-height: 90px;
+                        color: #0F6152;
+                    }
+
+                    .waitingListFormSubtitle{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 22px;
+                        line-height: 34px;
+                        color: #231F20;
+                        margin: 1rem 0 3.5rem 0;
+                    }
+
+                    .waitingListForm{
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+            
+                        .waitingListInput{
+                            border: 5px solid #000000;
+                            background: none;
+                            border-radius: 8px;
+                            font-family: Knicknack;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 22px;
+                            line-height: 34px;
+                            color: #231F20;
+                            padding: 0.5rem 1rem;
+                            width: 70%;
+                        }
+
+                        .waitingListFormSubmitBtn{
+                            background: #FA8029;
+                            border-radius: 8px;
+                            font-family: Knicknack;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 28px;
+                            line-height: 51px;
+                            text-align: center;
+                            color: #FFFFFF;
+                            box-shadow: none;
+                            border: none;
+                            padding: 0.5rem 2.5rem;
+                            white-space: nowrap;
+                            margin: 0 1rem;
+                        }
+                    }
+                }
+
+                .waitingListImg{
+                    max-width: 494px;
+                    position: absolute;
+                    bottom: 30px;
+                    right: 0;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
