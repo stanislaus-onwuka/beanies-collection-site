@@ -29,7 +29,7 @@ export default function Navigation() {
                 <Link href="/mint">Connect Wallet</Link>
             </div>
             <button className={styles.mobileMenuBtn}>
-
+                menu
             </button>
             <div className={styles.mobileMenuContainer}>
 
