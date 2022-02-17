@@ -19,10 +19,18 @@
 
         .faqTitleText{
             font-weight: 500;
-            font-size: 30px;
+            font-size: 28px;
             line-height: 51px;
             text-align: center;
             color: #231F20;
+        }
+
+        .expandIcon{
+            width: 28px;
+
+            img{
+                width:100%;
+            }
         }
     }
 

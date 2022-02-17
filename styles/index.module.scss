@@ -16,8 +16,8 @@
                 .heroTitle{
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 64px;
-                    line-height: 90px;
+                    font-size: 56px;
+                    line-height: 60px;
                     color: #D8FFB7;
                 }
 
@@ -26,7 +26,7 @@
                     
                     p{
                         font-weight: normal;
-                        font-size: 32px;
+                        font-size: 24px;
                         line-height: 45px;
                         color: #FFFFFF;
                         margin: 1.5rem 0;
@@ -76,8 +76,8 @@
                         border: 0.5px solid #000000;
                         box-sizing: border-box;
                         border-radius: 10px;
-                        padding: 0.5rem 5rem;
-                        width: 60%;
+                        padding: 0.5rem 1.5rem;
+                        width: 55%;
                         transition: 0.2s;
                         cursor: pointer;
                         max-width: 506px;
@@ -103,7 +103,7 @@
             .heroImg{
                 display: block;
                 position: relative;
-                max-width: 512px;
+                max-width: 450px;
                 background: #99FFD3;
                 border: 10px solid #000000;
                 box-sizing: border-box;
@@ -131,8 +131,8 @@
             .galleryContainerTitle{
                 font-style: normal;
                 font-weight: normal;
-                font-size: 96px;
-                line-height: 135px;
+                font-size: 64px;
+                line-height: 100px;
                 text-align: center;
                 color: #FF8934;
                 text-transform: uppercase;
@@ -150,8 +150,8 @@
             .thePlanContainerTitle{
                 font-style: normal;
                 font-weight: normal;
-                font-size: 96px;
-                line-height: 135px;
+                font-size: 64px;
+                line-height: 100px;
                 text-align: center;
                 color: #FF8934;
                 text-transform: uppercase;
@@ -160,7 +160,6 @@
             .planDesktopView{
                 display: flex;
                 flex-direction: row;
-
                 justify-content: space-around;
                 margin: 7rem 3rem;
                 width: 100%;
@@ -171,7 +170,7 @@
                 }
 
                 .jarOfBeansContainer{
-                    min-width: 498px;
+                    min-width: 450px;
                     margin: 0 1.5rem;
 
                     img{
@@ -191,7 +190,7 @@
                     .planTitle{
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 60px;
+                        font-size: 52px;
                         line-height: 101px;
                         color: #D8FFB7;
                     }
@@ -199,11 +198,11 @@
                     .planSubtitle{
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 20px;
+                        font-size: 18px;
                         line-height: 28px;
                         color: #FFFFFF;
                         margin: 0.5rem 0;
-                        width: 95%;
+                        width: 100%;
                     }
                 }
             }
@@ -219,8 +218,8 @@
 
             .teamContainerTitle{
                 font-weight: normal;
-                font-size: 96px;
-                line-height: 135px;
+                font-size: 64px;
+                line-height: 100px;
                 text-align: center;
                 color: #FF8934;
                 text-transform: uppercase;
@@ -244,15 +243,15 @@
             .faqsContainerTitle{
                 font-style: normal;
                 font-weight: 500;
-                font-size: 96px;
-                line-height: 135px;
+                font-size: 64px;
+                line-height: 100px;
                 text-align: center;
                 color: #FF9244;
                 text-transform: uppercase;
             }
 
             .faqsList{
-                margin: 7rem 1rem;
+                margin: 3rem 1rem 8rem 1rem;
                 width: 90%;
             }
         }
@@ -278,15 +277,15 @@
                     padding: 2rem;
                     .waitingListFormTitle{
                         font-weight: normal;
-                        font-size: 64px;
-                        line-height: 90px;
+                        font-size: 58px;
+                        line-height: 80px;
                         color: #0F6152;
                     }
 
                     .waitingListFormSubtitle{
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 22px;
+                        font-size: 20px;
                         line-height: 34px;
                         color: #231F20;
                         margin: 1rem 0 3.5rem 0;
@@ -304,7 +303,7 @@
                             font-family: Knicknack;
                             font-style: normal;
                             font-weight: normal;
-                            font-size: 22px;
+                            font-size: 20px;
                             line-height: 34px;
                             color: #231F20;
                             padding: 0.5rem 1rem;
@@ -317,13 +316,13 @@
                             font-family: Knicknack;
                             font-style: normal;
                             font-weight: normal;
-                            font-size: 28px;
+                            font-size: 24px;
                             line-height: 51px;
                             text-align: center;
                             color: #FFFFFF;
                             box-shadow: none;
                             border: none;
-                            padding: 0.5rem 2.5rem;
+                            padding: 0.5rem 2rem;
                             white-space: nowrap;
                             margin: 0 1rem;
                             cursor: pointer;
@@ -332,7 +331,7 @@
                 }
 
                 .waitingListImg{
-                    max-width: 494px;
+                    max-width: 430px;
                     position: absolute;
                     bottom: 30px;
                     right: 0;

@@ -16,13 +16,13 @@ export default function Navigation({showPopup}) {
             </ul>
             <div className={styles.subMenu}>
                 <div className={styles.navSocialsList}>
-                    <a className={styles.socialLink} href="#">
+                    <a className={styles.socialLink} href="https://discord.gg/AQSzuhmz" target="_blank">
                         <img src="/assets/svgs/Discord.svg" alt="Discord"/>
                     </a>
-                    <a className={styles.socialLink} href="#">
+                    <a className={styles.socialLink} href="https://www.instagram.com/wearebeanies/" target="_blank">
                         <img src="/assets/svgs/Instagram.svg" alt="Instagram"/>
                     </a>
-                    <a className={styles.socialLink} href="#">
+                    <a className={styles.socialLink} href="https://twitter.com/wearebeanies?s=21" target="_blank">
                         <img src="/assets/svgs/Twitter.svg" alt="Twitter"/>
                     </a>
                 </div>

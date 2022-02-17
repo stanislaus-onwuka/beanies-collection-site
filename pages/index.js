@@ -34,7 +34,7 @@ export default function Home({team,faqs}) {
         <Navigation showPopup={ showPopup }/>
         <div className={styles.heroContainer} id="home">
           <div className={styles.hero}>
-            <h2 className={styles.heroTitle}>BEANIES HAS A BEGINNING</h2>
+            <h2 className={styles.heroTitle}>THE BEANIES ORIGIN</h2>
             <div className={styles.heroParagraphs}>
               <p>A scientist who tries to give his jellybean flavours more “life” accidentally grants them sentience, unknown to him. 96 beanies escape the jar and escape into the metaverse on a quest to form their own society. Along with their sentience, the beanies developed rare attributes that gave them humanoid forms.</p>
               <p>The beanies might return to make all the jellybeans in the universe “life”, who knows?</p>
