@@ -25,8 +25,6 @@ export default function Gallery() {
 
     const shuffledBeanieList = shuffleBeanies(beaniesList);
 
-    console.log(shuffledBeanieList);
-
     return (
         <div className={styles.gallery}>
             <div className={styles.galleryGrid}>

@@ -1,9 +1,6 @@
 .faqContainer{
     display: flex;
     flex-direction: column;
-    background: #FFFFFF;
-    border: 5px solid #000000;
-    border-radius: 16px;
     width: 100%;
     margin: 2rem 0;
 
@@ -15,6 +12,10 @@
         align-items: center;
         padding: 1rem 2rem;
         cursor: pointer;
+        background: #FFFFFF;
+        border: 5px solid #000000;
+        border-radius:  16px;
+        transition: 0.3s;
 
         .faqTitleText{
             font-weight: 500;
@@ -23,6 +24,22 @@
             text-align: center;
             color: #231F20;
         }
+    }
 
+    .faqBody{
+        background:#D8FFB7;
+        padding: 2rem 1.5rem;
+        border: 5px solid #000000;
+        border-top: none;
+        border-radius: 0 0 16px 16px ;
+        transition: 0.3s;
+        
+        .faqBodyText{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            color: #332d2ef6;
+        }
     }
 }

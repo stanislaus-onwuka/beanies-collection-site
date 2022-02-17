@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '@styles/index.module.scss'
@@ -6,8 +7,23 @@ import Profile from '@components/Profile'
 import { teamData, faqsData } from '../data'
 import Faq from '@components/Faq'
 import Gallery from '@components/Gallery'
+import Popup from '@components/Popup'
 
 export default function Home({team,faqs}) {
+  const [openAccordion, setOpenAccordion] = useState(0);
+  const [popup, showPopup] = useState(false);
+
+  // FAQ Accordion
+  const handleToggleAccordion = (accordionId) => {
+    setOpenAccordion(prevOpen => {
+      if(prevOpen === accordionId){
+        return null
+      }else{
+        return accordionId
+      }
+    })
+  }
+
   return (
     <div className={styles.homepageContainer}>
       <Head>
@@ -15,8 +31,8 @@ export default function Home({team,faqs}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <Navigation/>
-        <div className={styles.heroContainer}>
+        <Navigation showPopup={ showPopup }/>
+        <div className={styles.heroContainer} id="home">
           <div className={styles.hero}>
             <h2 className={styles.heroTitle}>BEANIES HAS A BEGINNING</h2>
             <div className={styles.heroParagraphs}>
@@ -24,9 +40,12 @@ export default function Home({team,faqs}) {
               <p>The beanies might return to make all the jellybeans in the universe “life”, who knows?</p>
             </div>
             <div className={styles.mintInfoContainer}>
-              <div className={styles.mintPageBtn}>
+              {/* <div className={styles.mintPageBtn}>
                 <Link href="/mint">Mint now</Link>
-              </div>
+              </div> */}
+              <button className={styles.mintPageUnavailableBtn} onClick={()=>showPopup(true)}>
+                Mint now
+              </button>
               <p className={styles.mintPrice}>Price : 0.3eth + Gas</p>
             </div>
           </div>
@@ -40,7 +59,7 @@ export default function Home({team,faqs}) {
           <h2 className={styles.galleryContainerTitle}>Gallery</h2>
           <Gallery/>
         </section>
-        <section className={styles.thePlanContainer}>
+        <section className={styles.thePlanContainer} id="the-plan">
           <h2 className={styles.thePlanContainerTitle}>The plan</h2>
           <div className={styles.planDesktopView}>
             <div className={styles.planOneContainer}>
@@ -71,7 +90,7 @@ export default function Home({team,faqs}) {
             </div>
           </div>
         </section>
-        <section className={styles.teamContainer}>
+        <section className={styles.teamContainer} id="team">
           <h3 className={styles.teamContainerTitle}>Team</h3>
           <div className={styles.teamMembers}>
             {
@@ -81,12 +100,17 @@ export default function Home({team,faqs}) {
             }
           </div>
         </section>
-        <section className={styles.faqsContainer}>
+        <section className={styles.faqsContainer} id="faqs">
           <h3 className={styles.faqsContainerTitle}>faqs</h3>
           <div className={styles.faqsList}>
             {
               faqs.map((faq) => {
-                return <Faq faq={faq} key={ faq.id }/>
+                return <Faq 
+                          faq={faq} 
+                          key={ faq.id }
+                          handleToggle={() => handleToggleAccordion(faq.id)}
+                          openFaq={openAccordion === faq.id} 
+                        />
               })
             }
           </div>
@@ -107,6 +131,14 @@ export default function Home({team,faqs}) {
           </div>
         </section>
       </main>
+      {
+        popup &&
+        <Popup
+          popupStatus={ popup }
+          setPopupStatus={ showPopup }
+          message="Minting is currently unavailable"
+        />
+      }
     </div>
   )
 }

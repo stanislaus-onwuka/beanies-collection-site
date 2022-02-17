@@ -30,6 +30,12 @@
                 color: #FFFFFF;
                 text-decoration: none;
                 text-transform: uppercase;
+                transition: 0.3s;
+                white-space: nowrap;
+
+                &:hover{
+                    color: #FA8029;
+                }
             }
         }
     }
@@ -37,6 +43,7 @@
     .subMenu{
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         .navSocialsList{
             margin: 0 1rem;
@@ -59,6 +66,19 @@
                 white-space: nowrap;
 
             }
+        }
+
+        .unavailableBtn{
+            border: none;
+            padding: 0.8rem 1.5rem;
+            background: #FA8029;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 34px;
+            color: #FFFFFF;
+            white-space: nowrap;
+            cursor: pointer;
         }
     }
 

@@ -6,9 +6,15 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
+
 }
 
 body{
   background-color: #0F6152;
+  font-family: "Knicknack";
+}
+
+button{
   font-family: "Knicknack";
 }
