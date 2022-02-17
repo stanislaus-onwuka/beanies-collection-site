@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
+// import Link from 'next/link'
 import styles from '@styles/index.module.scss'
 import Navigation from '@components/Navigation'
 import Profile from '@components/Profile'
