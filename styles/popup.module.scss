@@ -10,16 +10,16 @@
         flex-direction: column;
         justify-content: space-between;
         position: fixed;
-        z-index: 2;
+        z-index: 3;
         background-image: url('../public/assets/pngs/popup-bg.png'),linear-gradient(#ffffff, #ffffff);
         padding: 2rem;
         width: 100%;
-        max-width: 500px;
+        max-width: 400px;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
         border-radius: 8px;
-        top: 25%;
+        top: 5%;
         left: 50%;
         transform: translate(-50%, 0);
 
@@ -31,7 +31,7 @@
         }
 
         .popupMessage{
-            margin: 3rem 0 8rem 0;
+            margin: 3rem 0 6rem 0;
             text-align: center;
             align-self: center;
         }
@@ -42,7 +42,7 @@
         position: fixed;
         background: #0f6152ad;
         top: 0;
-        z-index: 1;
+        z-index: 2;
         width: 100%;
         height: 100%;
     }

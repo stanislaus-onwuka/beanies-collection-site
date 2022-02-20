@@ -1,7 +1,23 @@
 @import './lib/breakpoints.scss';
 
 .homepageContainer{
+    display: flex;
+    flex-direction: row;
 
+    .homepage{
+        position: relative;
+        z-index: 1;
+        transition: 0.3s;
+        background-color: #0F6152;
+
+
+        @include media('>=custom-view-1'){
+            transform: translateX(0) !important;
+        }
+        
+
+    }
+    
     header{
         .heroContainer{
             display: flex;
@@ -478,6 +494,16 @@
                     padding-bottom: 2rem;
                     position: relative;
 
+                    @include media('<phone'){
+                        margin: 1rem 0 -2rem 0;
+    
+                    }
+    
+                    @include media('>=phone', '<tablet'){
+                        margin: 1rem 0 -2rem 0;
+                        
+                    }
+
                     &::before{
                         display: block;
                         content: "";
@@ -867,5 +893,74 @@
 
             
         }
+    }
+}
+
+.mobileMenuContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 0;
+    right: 0;
+    padding: 1.5rem 2.5rem;
+    height: 100%;
+
+    .mobileMenu{
+        list-style: none;
+        margin: 1.5rem 0;
+
+        .menuItem{
+            margin: 1.5rem 0;
+
+            .menuItemLink{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 40px;
+                color: #0F6152;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: 0.3s;
+                white-space: nowrap;
+
+                @include media('<phone'){
+                    font-size: 24px;
+                    line-height: 36px;
+                }
+
+                @include media('>phone','<custom-view'){
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+
+                &:hover{
+                    color: #FA8029;
+                }
+            }
+        }
+    }
+
+    .socialMediaContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .socialLink{
+            margin: 0 0.5rem;
+        }
+    }
+
+    .unavailableBtn{
+        border: none;
+        padding: 0.8rem 1.5rem;
+        background: #FA8029;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: #FFFFFF;
+        white-space: nowrap;
+        cursor: pointer;
     }
 }

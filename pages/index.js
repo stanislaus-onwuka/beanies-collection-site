@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import Head from 'next/head'
 import styles from '@styles/index.module.scss'
 import Navigation from '@components/Navigation'
@@ -11,17 +11,17 @@ import AppContext from '../state/AppContext'
 
 export default function Home({ team, faqs }) {
   const value = useContext(AppContext);
-  const { openAccordion, popupStatus } = value.state;
+  const { openAccordion, popupStatus, mobileMenu } = value.state;
   const { handleToggleAccordion, setPopupStatus } = value;
 
 
   return (
-    <div className={styles.homepageContainer}>
+    <div className={styles.homepageContainer} >
       <Head>
         <title>Home | Beanies</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.homepage}>
+      <div className={styles.homepage} style={ mobileMenu ? {transform: 'translateX(-250px)'} : {transform: 'translateX(0)'}}>
         <header>
           <Navigation/>
           <div className={styles.heroContainer} id="home">
@@ -169,6 +169,7 @@ export default function Home({ team, faqs }) {
               </div>
             </div>
 
+
           </section>
         </main>
         {
@@ -179,8 +180,28 @@ export default function Home({ team, faqs }) {
         }
       </div>
       <div className={styles.mobileMenuContainer}>
-                
+        <ul className={styles.mobileMenu}>
+          <li className={styles.menuItem}><a href="#home" className={styles.menuItemLink}>Home</a></li>
+          <li className={styles.menuItem}><a href="#the-plan" className={styles.menuItemLink}>The plan</a></li>
+          <li className={styles.menuItem}><a href="#team" className={styles.menuItemLink}>Team</a></li>
+          <li className={styles.menuItem}><a href="#faqs" className={styles.menuItemLink}>FAQS</a></li>
+        </ul>  
+        <div className={styles.socialMediaContainer}>
+          <a className={styles.socialLink} href="https://discord.gg/AQSzuhmz" target="_blank">
+            <img src="/assets/svgs/Discord-mobile.svg" alt="Discord"/>
+          </a>
+          <a className={styles.socialLink} href="https://www.instagram.com/wearebeanies/" target="_blank">
+            <img src="/assets/svgs/Instagram-mobile.svg" alt="Instagram"/>
+          </a>
+          <a className={styles.socialLink} href="https://twitter.com/wearebeanies?s=21" target="_blank">
+            <img src="/assets/svgs/Twitter-mobile.svg" alt="Twitter"/>
+          </a>
+        </div>
+        <button className={styles.unavailableBtn} onClick={()=>setPopupStatus(true)}>
+          Connect Wallet
+        </button>
       </div>
+
     </div>
   )
 }

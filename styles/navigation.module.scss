@@ -185,4 +185,51 @@
     
     }
 
+    .closeMobileMenuBtn{
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        background: none;
+        border: none;
+        justify-content: center;
+        transition: 0.3s;
+
+        div{
+            display: block;
+            width: 100%;
+            height:3px;
+            border-radius: 20px;
+            background: #D8FFB7;
+        }
+
+        .bar1{
+            transform: rotateZ(309deg) translateX(-3px);
+        }
+
+        .bar2{
+            display: none;
+            margin: 0.4rem 0;
+            transition: 0.2s;
+        }
+
+        .bar3{
+            transform: rotateZ(47deg);
+        }
+
+        
+
+        @include media('<phone'){
+            display: flex;
+    
+        }
+    
+        @include media('>=phone','<custom-view-1'){
+            display: flex;
+    
+        }
+    
+    }
+
 }

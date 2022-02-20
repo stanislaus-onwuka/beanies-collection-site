@@ -5,7 +5,9 @@ import styles from '@styles/navigation.module.scss'
 
 export default function Navigation() {
     const value = useContext(AppContext);
-    const { setPopupStatus } = value;
+    const { setPopupStatus, showMobileMenu } = value;
+    const { mobileMenu } = value.state;
+
 
     return (
         <nav className={styles.navigation}>
@@ -37,7 +39,7 @@ export default function Navigation() {
                     Connect Wallet
                 </button>
             </div>
-            <button className={styles.mobileMenuBtn}>
+            <button className={ mobileMenu ? styles.closeMobileMenuBtn : styles.mobileMenuBtn} onClick={()=>showMobileMenu(!mobileMenu)}>
                 <div className={styles.bar1}></div>
                 <div className={styles.bar2}></div>
                 <div className={styles.bar3}></div>
