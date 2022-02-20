@@ -1,9 +1,27 @@
+@import './lib/breakpoints.scss';
+ 
 .gallery{
     display: flex;
     flex-direction: row;
     margin: 10rem auto;
     overflow: hidden;
     width: 98vw;
+
+    @include media('<phone'){
+        margin: 3rem auto;
+        width: 90vw;
+    }
+
+    @include media('>=phone','<tablet'){
+        margin: 4rem auto;
+        width: 95vw;
+
+    }
+
+    @include media('>=tablet','<custom-view-1'){
+        width: 97vw;
+
+    }
 
     .galleryGrid{
         display: inline-flex;

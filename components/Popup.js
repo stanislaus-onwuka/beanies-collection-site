@@ -1,7 +1,13 @@
+import { useContext } from 'react'
+import AppContext from '../state/AppContext'
 import styles from '@styles/popup.module.scss'
 
 
-export default function Popup({ popupStatus, setPopupStatus, message }) {
+export default function Popup({ message }) {
+    const value = useContext(AppContext);
+    const { popupStatus } = value.state;
+    const { setPopupStatus } = value;
+
     return (
         <div className={styles.popupContainer} style={popupStatus ? {display: 'block'}:{display: 'none'}}>
             <div className={styles.popup}>

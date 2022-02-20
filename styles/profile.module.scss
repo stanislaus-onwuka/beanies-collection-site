@@ -1,11 +1,22 @@
+@import './lib/breakpoints.scss';
+
 .profile{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 1.5rem;
+    margin: 1rem 1.5rem;
 
     .profileImg{
         max-width: 300px;
+
+        @include media('<phone'){
+            max-width: 150px;
+        }
+
+        @include media('>=phone', '<tablet'){
+            max-width: 200px;        
+        }
+
 
         img{
             width: 100%;
@@ -23,6 +34,17 @@
             text-align: center;
             color: #D8FFB7;
             text-transform: capitalize;
+
+            
+            @include media('<phone'){
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            @include media('>=phone', '<tablet'){
+                font-size: 26px;
+                line-height: 36px;        
+            }
         }
 
         .name{
@@ -32,6 +54,16 @@
             line-height: 40px;
             text-align: center;
             color: #FFFFFF;
+
+            @include media('<phone'){
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            @include media('>=phone', '<tablet'){
+                font-size: 20px;
+                line-height: 30px;       
+            }
         }
     }
 }

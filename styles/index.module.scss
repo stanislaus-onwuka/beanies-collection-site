@@ -1,3 +1,5 @@
+@import './lib/breakpoints.scss';
+
 .homepageContainer{
 
     header{
@@ -8,10 +10,40 @@
             margin-top: 4rem;
             padding: 3rem;
 
+            @include media('<phone'){
+               flex-direction: column-reverse;
+               align-items: center;
+               margin-top: 1rem;
+               padding: 1rem;          
+
+            }
+
+            @include media('>phone', '<custom-view'){
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 1rem;  
+                padding: 2rem;          
+            }
+            
+
             .hero{
                 display: flex;
                 flex-direction: column;
                 max-width: 55%;
+                
+                @include media('<phone'){
+                    max-width: 100%;
+                    align-items: center;
+                    margin-top: 1rem;
+
+                }
+    
+                @include media('>=phone', '<custom-view'){
+                    max-width: 100%;
+                    align-items: center;
+                    margin-top: 1rem;
+                            
+                }
 
                 .heroTitle{
                     font-style: normal;
@@ -19,10 +51,37 @@
                     font-size: 56px;
                     line-height: 60px;
                     color: #D8FFB7;
+
+                    @include media('<phone'){
+                        text-align: center;
+                        font-size: 22px;
+                        line-height: 39px;
+                    }
+
+                    @include media('>=phone', '<tablet'){
+                        text-align: center;
+                        font-size: 32px;
+                        line-height: 42px;
+                        
+                    }
+        
+                    @include media('>=tablet', '<custom-view'){
+                        text-align: center;
+                        
+                    }
+
                 }
 
                 .heroParagraphs{
                     margin-top: 1rem;
+
+                    @include media('<phone'){
+                        display: none;
+                    }
+        
+                    @include media('>=phone', '<custom-view'){
+                        display: none;                        
+                    }
                     
                     p{
                         font-weight: normal;
@@ -30,7 +89,52 @@
                         line-height: 45px;
                         color: #FFFFFF;
                         margin: 1.5rem 0;
+
+                        @include media('<phone'){
+                            font-size: 18px;
+                            line-height: 45px;
+                        }
+            
+                        @include media('>=phone', '<desktop'){
+                            font-size: 22px;
+                            line-height: 40px;
+                            
+                        }
+            
                     }
+                }
+
+                .heroParagraphMobile{
+                    display: none;
+                    font-weight: normal;
+                    font-size: 24px;
+                    line-height: 45px;
+                    color: #FFFFFF;
+                    margin: 1.5rem 0;
+                    text-align: center;
+
+
+                    @include media('<phone'){
+                        display: block;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                    @include media('>=phone', '<tablet'){
+                        display: block;
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 24px;
+                        
+                    }
+        
+                    @include media('>=tablet', '<custom-view'){
+                        display: block;
+                        font-size: 22px;
+                        line-height: 40px;
+                        
+                    }
+        
                 }
 
                 .mintInfoContainer{
@@ -38,6 +142,19 @@
                     flex-direction: column;
                     width: 100%;
                     margin-top: 4rem;
+
+                    @include media('<phone'){
+                        text-align: center;
+                        align-items: center;
+                        margin-top: 1rem;
+
+                    }
+        
+                    @include media('>=phone', '<custom-view'){
+                        text-align: center;
+                        align-items: center;
+                        margin-top: 2rem; 
+                    }
 
                     .mintPageBtn{
                         width: 100%;
@@ -49,12 +166,28 @@
                             color: #FFFFFF;
                             text-decoration: none;
                             background: #FA8029;
-                            border: 0.5px solid #000000;
+                            // border: 0.5px solid #000000;
+                            border: none;
                             box-sizing: border-box;
                             border-radius: 10px;
                             padding: 0.5rem 5rem;
                             width: 100%;
                             transition: 0.2s;
+
+                            @include media('<phone'){
+                                width: 100%;
+                                max-width: unset;
+                                font-size: 24px;
+                                line-height: 34px;
+                            }
+        
+                            @include media('>=phone', '<tablet'){
+                                width: 100%;
+                                max-width: unset;
+                                font-size: 24px;
+                                line-height: 34px;
+                                
+                            }
 
                             &:hover{
                                 background: #c46521;
@@ -73,7 +206,8 @@
                         color: #FFFFFF;
                         text-decoration: none;
                         background: #FA8029;
-                        border: 0.5px solid #000000;
+                        // border: 0.5px solid #000000;
+                        border: none;
                         box-sizing: border-box;
                         border-radius: 10px;
                         padding: 0.5rem 1.5rem;
@@ -81,6 +215,24 @@
                         transition: 0.2s;
                         cursor: pointer;
                         max-width: 506px;
+
+                        @include media('<phone'){
+                            width: 100%;
+                            max-width: unset;
+                            font-size: 24px;
+                            line-height: 34px;
+                            padding: 1rem 1.5rem;
+
+                        }
+    
+                        @include media('>=phone', '<tablet'){
+                            width: 100%;
+                            max-width: unset;
+                            font-size: 24px;
+                            line-height: 34px;
+                            padding: 1rem 1.5rem;
+                            
+                        }
 
                         &:hover{
                             background: #c46521;
@@ -111,10 +263,39 @@
                 width: 100%;
                 max-height: 512px;
 
+                @include media('<phone'){
+                    position: unset;
+
+                }
+
+                @include media('>=phone', '<custom-view'){
+                    position: unset;
+                    
+                }
+    
+                @include media('>=custom-view', '<desktop'){
+                    width: 100%;
+                    max-height: 500px;
+                    max-width: 400px;
+                    
+                }
+
                 img{
                     position: absolute;
                     bottom: 0;
                     width: 100%;
+
+                    @include media('<phone'){
+                        position: unset;
+                        margin-bottom: -0.3rem;
+    
+                    }
+    
+                    @include media('>=phone', '<custom-view'){
+                        position: unset;
+                        margin-bottom: -0.3rem;
+                        
+                    }
                 }
             }
         }
@@ -137,6 +318,17 @@
                 color: #FF8934;
                 text-transform: uppercase;
 
+                @include media('<phone'){
+                    font-size: 36px;
+                    line-height: 51px; 
+
+                }
+
+                @include media('>=phone', '<tablet'){
+                    font-size: 40px;
+                    line-height: 51px;         
+                }
+
             }
         }
 
@@ -155,6 +347,66 @@
                 text-align: center;
                 color: #FF8934;
                 text-transform: uppercase;
+
+                @include media('<phone'){
+                    font-size: 36px;
+                    line-height: 51px; 
+
+                }
+
+                @include media('>=phone', '<tablet'){
+                    font-size: 40px;
+                    line-height: 51px;         
+                }
+            }
+
+            .plan{
+                margin: 1rem;
+
+                .planTitle{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 52px;
+                    line-height: 101px;
+                    color: #D8FFB7;
+
+                    @include media('<phone'){
+                        font-size: 24px;
+                        line-height: 34px;
+                        margin-top: 1.5rem;
+    
+                    }
+    
+                    @include media('>=phone', '<tablet'){
+                        font-size: 30px;
+                        line-height: 42px;
+                        margin-top: 1.5rem;
+
+                        
+                    }
+                }
+
+                .planSubtitle{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                    margin: 0.5rem 0;
+                    width: 100%;
+
+                    @include media('<phone'){
+                        font-size: 16px;
+                        line-height: 24px;
+    
+                    }
+    
+                    @include media('>=phone', '<tablet'){
+                        font-size: 16px;
+                        line-height: 24px;
+                        
+                    }
+                }
             }
 
             .planDesktopView{
@@ -164,6 +416,16 @@
                 margin: 7rem 3rem;
                 width: 100%;
 
+                @include media('<phone'){
+                    display: none;
+
+                }
+
+                @include media('>=phone', '<custom-view'){
+                    display: none;
+                    
+                }
+
                 .planOneContainer{
                     align-self: center;
                     margin-left: 1rem;
@@ -172,6 +434,15 @@
                 .jarOfBeansContainer{
                     min-width: 450px;
                     margin: 0 1.5rem;
+
+                    @include media('<phone'){
+                        min-width: 400px;  
+
+                    }
+        
+                    @include media('>=custom-view', '<desktop'){
+                        min-width: 400px;       
+                    }
 
                     img{
                         width: 100%;
@@ -184,24 +455,56 @@
                     justify-content: space-between;
                 }
 
-                .plan{
-                    margin: 1rem;
+                
+            }
 
-                    .planTitle{
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 52px;
-                        line-height: 101px;
-                        color: #D8FFB7;
+            .planMobileView{
+                display: none;
+                
+                
+                @include media('<phone'){
+                    display: block;
+
+                }
+
+                @include media('>=phone', '<custom-view'){
+                    display: block;
+                    
+                }
+
+                .planList{
+                    // border-left: 3px solid #69E16D;
+                    margin: 1rem 1.5rem -2rem 1.5rem;
+                    padding-bottom: 2rem;
+                    position: relative;
+
+                    &::before{
+                        display: block;
+                        content: "";
+                        height: 100%;
+                        width: 3px;
+                        background: #69E16D;
+                        position: absolute;
+                        left: 35px;
+                        top: 45px;
+
                     }
 
-                    .planSubtitle{
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 18px;
-                        line-height: 28px;
-                        color: #FFFFFF;
-                        margin: 0.5rem 0;
+                    .planMobileContainer{
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+
+                .beans{
+                    max-width: 200px;
+                    position: relative;
+                    z-index: 1;
+                    // margin-bottom: 1rem;
+
+                    img{
                         width: 100%;
                     }
                 }
@@ -215,6 +518,14 @@
             width: 100%;
             margin: 7rem 0;
 
+            @include media('<phone'){
+                margin: 2rem 0;
+            }
+
+            @include media('>=phone', '<tablet'){
+                margin: 4rem 0;         
+            }
+
 
             .teamContainerTitle{
                 font-weight: normal;
@@ -223,6 +534,17 @@
                 text-align: center;
                 color: #FF8934;
                 text-transform: uppercase;
+
+                @include media('<phone'){
+                    font-size: 36px;
+                    line-height: 51px; 
+
+                }
+
+                @include media('>=phone', '<tablet'){
+                    font-size: 40px;
+                    line-height: 51px;         
+                }
             }
 
 
@@ -248,20 +570,99 @@
                 text-align: center;
                 color: #FF9244;
                 text-transform: uppercase;
+
+                @include media('<phone'){
+                    font-size: 36px;
+                    line-height: 51px; 
+
+                }
+
+                @include media('>=phone', '<tablet'){
+                    font-size: 40px;
+                    line-height: 51px;         
+                }
             }
 
             .faqsList{
                 margin: 3rem 1rem 8rem 1rem;
                 width: 90%;
+
+                
+                @include media('<phone'){
+                    margin: 2rem 1rem;
+
+                }
+
+                @include media('>=phone', '<tablet'){
+                    margin: 2rem 1rem;
+         
+                }
+    
+                @include media('>=tablet', '<desktop'){
+                    margin: 3rem 1rem 2rem 1rem;
+                     
+                }
+
             }
         }
 
         .waitingListContainer{
             display: flex;
             flex-direction: column;
-            position: relative;
             padding: 2rem 3rem;
             margin: 7rem 0;
+
+            @include media('<phone'){
+                margin-top: 0;
+                align-items: center;
+                padding: 2rem 1rem;
+
+
+            }
+
+            @include media('>=phone', '<tablet'){
+                margin-top: 0;
+                align-items: center; 
+                padding: 2rem 1rem;
+
+                
+            }
+
+            @include media('>=tablet', '<desktop'){
+                margin-top: 0;
+                align-items: center;  
+            }
+
+            .waitingListImgMobile{
+                display: none;
+                position: relative;
+                max-width: 400px;
+                margin-bottom: -3.5rem;
+
+                @include media('<phone'){
+                    z-index: 1;
+                    display: block;
+                    max-width: 150px;
+
+                }
+
+                @include media('>=phone', '<tablet'){
+                    z-index: 1;
+                    display: block;
+                    max-width: 200px;
+                    
+                }
+    
+                @include media('>=tablet', '<desktop'){
+                    z-index: 1;
+                    display: block;
+                        
+                }
+
+                img{
+                    width: 100%;
+                }
+            }
 
             .waitingList{
                 display: flex;
@@ -270,16 +671,65 @@
                 background: #E6FFD1;
                 border: 10px solid #231F20;
                 border-radius: 24px;
+                width: 100%;
+
+                @include media('<phone'){
+                    width: 100%;
+                }
+
+                @include media('>=phone', '<desktop'){ 
+                    width: 100%;
+
+                }
                 
 
                 .waitingListFormContainer{
                     width: 70%;
                     padding: 2rem;
+
+                    @include media('<phone'){
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        padding: 2rem 1rem;
+
+                    }
+        
+                    @include media('>=phone', '<desktop'){
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 2rem 1.5rem;
+                    }
+
+                    
                     .waitingListFormTitle{
                         font-weight: normal;
                         font-size: 58px;
                         line-height: 80px;
                         color: #0F6152;
+
+                        
+                        @include media('<phone'){
+                            font-size: 24px;
+                            line-height: 34px;
+                            text-align: center;
+                        }
+        
+                        @include media('>=phone', '<tablet'){
+                            font-size: 30px;
+                            line-height: 40px;
+                            text-align: center;
+                            
+                        }
+            
+                        @include media('>=tablet', '<desktop'){
+                            text-align: center;
+  
+                        }
+
                     }
 
                     .waitingListFormSubtitle{
@@ -289,12 +739,47 @@
                         line-height: 34px;
                         color: #231F20;
                         margin: 1rem 0 3.5rem 0;
+
+                        @include media('<phone'){
+                            font-size: 16px;
+                            line-height: 20px;
+                            text-align: center;
+                            width: 80%;
+                            margin: 1rem 0;
+
+                        }
+
+                        @include media('>=phone', '<tablet'){
+                            text-align: center;
+                            width: 80%;
+                            font-size: 16px;
+                            line-height: 20px;
+                            margin: 1rem 0 1.5rem 0;
+                        }
+            
+                        @include media('>=tablet', '<desktop'){
+                            text-align: center;
+                            width: 80%;
+
+                        }
                     }
 
                     .waitingListForm{
                         display: flex;
                         flex-direction: row;
                         width: 100%;
+
+                        @include media('<phone'){
+                            flex-direction: column; 
+                            align-items: center;
+        
+                        }
+        
+                        @include media('>=phone', '<tablet'){
+                            flex-direction: column; 
+                            align-items: center;
+
+                        }
             
                         .waitingListInput{
                             border: 5px solid #000000;
@@ -308,6 +793,20 @@
                             color: #231F20;
                             padding: 0.5rem 1rem;
                             width: 70%;
+
+                            @include media('<phone'){
+                                width: 100%;
+                                margin: 1.5rem 0;
+                                font-size: 16px;
+                                
+                            }
+            
+                            @include media('>=phone', '<tablet'){
+                                width: 100%;
+                                margin: 1.5rem 0;
+                                font-size: 16px;
+                                          
+                            }
                         }
 
                         .waitingListFormSubmitBtn{
@@ -326,6 +825,21 @@
                             white-space: nowrap;
                             margin: 0 1rem;
                             cursor: pointer;
+
+                            @include media('<phone'){
+                                width: 100%;
+                                font-size: 18px;
+                                line-height: 25px;
+                                padding: 1rem 2rem;
+                            }
+            
+                            @include media('>=phone', '<tablet'){
+                                width: 100%;
+                                font-size: 19px;
+                                line-height: 25px;  
+                                padding: 1rem 2rem;
+
+                            }
                         }
                     }
                 }
@@ -336,11 +850,22 @@
                     bottom: 30px;
                     right: 0;
 
+                    @include media('<phone'){
+                        display: none;
+                    }
+        
+                    @include media('>=phone', '<desktop'){
+                        display: none;
+                         
+                    }
+
                     img{
                         width: 100%;
                     }
                 }
             }
+
+            
         }
     }
 }

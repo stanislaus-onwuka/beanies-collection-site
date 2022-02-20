@@ -1,8 +1,12 @@
-import Link from 'next/link'
-
+import { useContext } from 'react'
+import AppContext from '../state/AppContext'
+// import Link from 'next/link'
 import styles from '@styles/navigation.module.scss'
 
-export default function Navigation({showPopup}) {
+export default function Navigation() {
+    const value = useContext(AppContext);
+    const { setPopupStatus } = value;
+
     return (
         <nav className={styles.navigation}>
             <div className={styles.logo}>
@@ -29,16 +33,15 @@ export default function Navigation({showPopup}) {
                 {/* <div className={styles.connectWalletBtn}>
                     <Link href="/mint">Connect Wallet</Link>
                 </div> */}
-                <button className={styles.unavailableBtn} onClick={()=>showPopup(true)}>
+                <button className={styles.unavailableBtn} onClick={()=>setPopupStatus(true)}>
                     Connect Wallet
                 </button>
             </div>
             <button className={styles.mobileMenuBtn}>
-                menu
+                <div className={styles.bar1}></div>
+                <div className={styles.bar2}></div>
+                <div className={styles.bar3}></div>
             </button>
-            <div className={styles.mobileMenuContainer}>
-
-            </div>
         </nav>
     )
 }

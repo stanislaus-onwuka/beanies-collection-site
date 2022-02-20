@@ -1,3 +1,5 @@
+@import './lib/breakpoints.scss';
+
 .beanieProfile{
     display: block;
     min-width: 250px;
@@ -5,6 +7,18 @@
     border: 7px solid #000000;
     border-radius: 20px;
     width: 100%;
+
+    @include media('<phone'){
+        min-width: 100px;
+    }
+
+    @include media('>=phone','<tablet'){
+        min-width: 150px;
+    }
+
+    @include media('>=tablet','<custom-view-1'){
+        min-width: 200px;
+    }
 
     img{
         margin-bottom: -0.4rem;

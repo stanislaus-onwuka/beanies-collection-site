@@ -1,3 +1,5 @@
+@import './lib/breakpoints.scss';
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -6,6 +8,19 @@
 
     .footerLogo{
         max-width: 316px;
+
+        @include media('<phone'){
+            max-width: 120px;
+        }
+    
+        @include media('>=phone','<tablet'){
+            max-width: 200px;
+    
+        }
+
+        img{
+            width: 100%;
+        }
     }
 
     .contractAddress{
@@ -15,6 +30,17 @@
         text-align: center;
         margin: 3rem 0;
         color: #FFFFFF;
+
+        @include media('<phone'){
+            font-size: 18px;
+            line-height: 40px; 
+        }
+    
+        @include media('>=phone','<tablet'){
+            font-size: 20px;
+            line-height: 40px;  
+    
+        }
 
         a{
             text-decoration: none;
