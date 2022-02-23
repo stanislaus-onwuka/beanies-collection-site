@@ -8,7 +8,7 @@ export const teamData = [
     {
         id: 2,
         name: "Retro",
-        role: "cofounder",
+        role: "co-founder/data analyst",
         imgLink: '/assets/pngs/retro.png'
     },
     {

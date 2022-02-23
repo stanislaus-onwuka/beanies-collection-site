@@ -281,12 +281,14 @@
 
                 @include media('<phone'){
                     position: unset;
-
+                    max-height: 500px;
+                    max-width: 400px;
                 }
 
                 @include media('>=phone', '<custom-view'){
                     position: unset;
-                    
+                    max-height: 500px;
+                    max-width: 400px;
                 }
     
                 @include media('>=custom-view', '<desktop'){
@@ -578,7 +580,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                margin: 5rem 0;
+                margin: 2rem 0 3rem 0;
             }
         }
 
@@ -610,7 +612,7 @@
             }
 
             .faqsList{
-                margin: 3rem 1rem 8rem 1rem;
+                margin: 2rem 1rem 8rem 1rem;
                 width: 90%;
 
                 
@@ -735,7 +737,8 @@
                         font-weight: normal;
                         font-size: 58px;
                         line-height: 80px;
-                        color: #0F6152;
+                        color: #231F20;
+
 
                         
                         @include media('<phone'){
@@ -763,8 +766,8 @@
                         font-weight: normal;
                         font-size: 20px;
                         line-height: 34px;
-                        color: #231F20;
-                        margin: 1rem 0 3.5rem 0;
+                        color: #0F6152;
+                        margin: 1rem 0 2.5rem 0;
 
                         @include media('<phone'){
                             font-size: 16px;
@@ -819,6 +822,7 @@
                             color: #231F20;
                             padding: 0.5rem 1rem;
                             width: 70%;
+                            background: #FFFFFF;
 
                             @include media('<phone'){
                                 width: 100%;

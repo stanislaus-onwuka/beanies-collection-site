@@ -160,7 +160,7 @@ export default function Home({ team, faqs }) {
                 <h2 className={styles.waitingListFormTitle}>Join our waiting list</h2>
                 <p className={styles.waitingListFormSubtitle}>To stay updated on new information about the collection. Join our mailing list.</p>
                 <form className={styles.waitingListForm}>
-                  <input type="text" name="waiting-list-input" placeholder='Enter your Email' className={styles.waitingListInput} required />
+                  <input type="text" name="waiting-list-input" placeholder='Enter your email address' className={styles.waitingListInput} required />
                   <input type="submit" value="Submit" className={styles.waitingListFormSubmitBtn} />
                 </form>
               </div>
