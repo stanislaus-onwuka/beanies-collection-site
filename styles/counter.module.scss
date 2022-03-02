@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-color: #0C6C01;
+    margin-top: 26px;
+    margin-bottom: 46px;
+  
+  
+    .decrement, .increment {
+      flex: 1;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    div {
+      cursor: pointer;
+    }
+  
+    p {
+      flex: 3;
+      width: 100px;
+    }
+  }
