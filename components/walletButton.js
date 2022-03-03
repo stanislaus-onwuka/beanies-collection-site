@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import {WalletContext} from '@state/Wallet';
-import styles from "@styles/walletButton.module.scss";
+import {WalletContext} from '../state/Wallet'
+import styles from "../styles/walletButton.module.scss";
 
 const walletButton = ({ ...props }) => {
   const { walletAddress, connectWallet } = useContext(WalletContext);

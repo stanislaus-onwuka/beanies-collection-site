@@ -1,14 +1,15 @@
 import Head from 'next/head'
-import styles from '@styles/mintpage.module.scss'
+import styles from '../../styles/mintpage.module.scss'
 import { useState, useContext } from "react";
 import Web3 from "web3";
 import Image from "next/image";
 import { useAlert } from "react-alert";
 //import BeaniesABI from "../artifacts/BeaniesABI.json";
-import { Counter } from "@components/counter";
-import { MintHeader } from "@components/MintHeader";
-import { WalletContext } from "@state/Wallet";
-//import Beanies1 from "../assets/images/Beanies1.svg";
+import  Counter  from "../../components/counter";
+import  MintHeader  from "../../components/MintHeader";
+import { WalletContext } from "../../state/Wallet";
+import Beanies1 from "../../public/assets/svgs/list-icons/cherry_bean_1.svg";
+import Beanies2 from "../../public/assets/svgs/list-icons/cherry_bean_2.svg";
 
 
 
@@ -83,9 +84,48 @@ export default function Mint() {
             <title>Mint Beanies | Beanies</title>
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
-                <h3>Mint</h3>
-            </main>
+            <MintHeader wallet />
+      <h1>You are about to release your Beanie from the Lab</h1>
+      <p>How many Beanies would you like to release?</p>
+      <div className={styles.counterWrapper}>
+        <div className={styles.imageWrapper}>
+          <Image
+            priority
+            layout="fill"
+            className={styles.Beanie}
+            src={Beanies1}
+            alt="Beanie"
+          />
         </div>
+        <div>
+          <p> 
+            MINT PRICE OF {Web3.utils.fromWei(String(COLLECTION_PRICE))} ETH
+          </p>
+          <Counter
+            onIncrement={onIncrement}
+            onDecrement={onDecrement}
+            amountToMint={amountToMint}
+          />
+          <button
+            onClick={() => {
+              mint(provider, walletAddress);
+            }}
+            className={`${styles.mintBtn} ${amountToMint > 0 && styles.active}`}
+          >
+            MINT
+          </button>
+          <p>MINT MAX OF 3</p>
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image
+            priority
+            layout="fill"
+            className={styles.Beanie}
+            src={Beanies2}
+            alt="Beanie2"
+          />
+        </div>
+      </div>
+    </div>
     )
 }

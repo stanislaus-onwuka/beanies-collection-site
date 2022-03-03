@@ -10,8 +10,8 @@ const MintHeader = ({ wallet }) => {
     <div className={styles.container}>
       <Link href="/">
         <a>
-          <img src="/logo.png" />
-          {/* <Image priority src={logo} alt="beanies" /> */}
+          {/*<img src="/logo.png" />*/}
+          <Image priority src={logo} alt="beanie" /> 
         </a>
       </Link>
       {wallet && <walletButton />}
