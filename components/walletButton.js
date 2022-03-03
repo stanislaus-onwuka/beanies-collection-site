@@ -2,7 +2,7 @@ import { useContext } from "react";
 import {WalletContext} from '../state/Wallet'
 import styles from "../styles/walletButton.module.scss";
 
-const walletButton = ({ ...props }) => {
+const WalletButton = ({ ...props }) => {
   const { walletAddress, connectWallet } = useContext(WalletContext);
 
   const handleBtn = () => {
@@ -22,4 +22,4 @@ const walletButton = ({ ...props }) => {
   );
 };
 
-export default walletButton;
+export default WalletButton;

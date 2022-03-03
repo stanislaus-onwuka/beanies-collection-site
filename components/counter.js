@@ -1,4 +1,4 @@
-import { HiPlus, HiMinus } from "react-icons/hi";
+import { HiPlusCircle, HiMinusCircle } from "react-icons/hi";
 
 import styles from "@styles/counter.module.scss";
 
@@ -6,11 +6,11 @@ const Counter = ({ amountToMint, onIncrement, onDecrement }) => {
   return (
     <div className={styles.container}>
       <div onClick={onDecrement} className={styles.decrement}>
-        <HiMinus />
+        <HiMinusCircle />
       </div>
       <p>{amountToMint}</p>
       <div onClick={onIncrement} className={styles.increment}>
-        <HiPlus />
+        <HiPlusCircle />
       </div>
     </div>
   );

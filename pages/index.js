@@ -8,6 +8,7 @@ import Faq from '@components/Faq'
 import Gallery from '@components/Gallery'
 import Popup from '@components/Popup'
 import AppContext from '../state/AppContext'
+import Footer from '@components/Footer'
 
 export default function Home({ team, faqs }) {
   const value = useContext(AppContext);
@@ -178,6 +179,7 @@ export default function Home({ team, faqs }) {
             message="Minting is currently unavailable"
           />
         }
+         <Footer/>
       </div>
       <div className={styles.mobileMenuContainer}>
         <ul className={styles.mobileMenu}>
@@ -201,7 +203,7 @@ export default function Home({ team, faqs }) {
           Connect Wallet
         </button>
       </div>
-
+       
     </div>
   )
 }
