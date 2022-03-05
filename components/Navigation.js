@@ -39,11 +39,34 @@ export default function Navigation() {
                     Connect Wallet
                 </button>
             </div>
-            <button className={ mobileMenu ? styles.closeMobileMenuBtn : styles.mobileMenuBtn} onClick={()=>showMobileMenu(!mobileMenu)}>
-                <div className={styles.bar1}></div>
-                <div className={styles.bar2}></div>
-                <div className={styles.bar3}></div>
+            <button className={ styles.mobileMenuBtn} onClick={()=>showMobileMenu(true)}>
+                <img src='/assets/svgs/menu.svg' alt="Close button" />
             </button>
+            <div className={styles.mobileMenuContainer} style={ mobileMenu ? {transform:`translateX(0)`} : {transform:`translateX(1000px)`} }>
+                <button className={styles.closeMobileMenuBtn} onClick={()=>showMobileMenu(false)}>
+                    <img src='/assets/svgs/close-btn.svg' alt="Close button" />
+                </button>
+                <div className={styles.jesterImg}>
+                    <img src="/assets/pngs/beanie-jester.png" alt="Beanie Jester"/>
+                </div>
+                <ul className={styles.mobileMenu}>
+                    <li className={styles.menuItem}><a href="#home" className={styles.menuItemLink}>Home</a></li>
+                    <li className={styles.menuItem}><a href="#the-plan" className={styles.menuItemLink}>The plan</a></li>
+                    <li className={styles.menuItem}><a href="#team" className={styles.menuItemLink}>Team</a></li>
+                    <li className={styles.menuItem}><a href="#faqs" className={styles.menuItemLink}>FAQS</a></li>
+                </ul>  
+                <div className={styles.socialMediaContainer}>
+                    <a className={styles.socialLink} href="https://discord.gg/AQSzuhmz" target="_blank">
+                        <img src="/assets/svgs/Discord-mobile.svg" alt="Discord"/>
+                    </a>
+                    <a className={styles.socialLink} href="https://www.instagram.com/wearebeanies/" target="_blank">
+                        <img src="/assets/svgs/Instagram-mobile.svg" alt="Instagram"/>
+                    </a>
+                    <a className={styles.socialLink} href="https://twitter.com/wearebeanies?s=21" target="_blank">
+                        <img src="/assets/svgs/Twitter-mobile.svg" alt="Twitter"/>
+                    </a>
+                </div>
+            </div>
         </nav>
     )
 }

@@ -8,7 +8,7 @@ export const teamData = [
     {
         id: 2,
         name: "Retro",
-        role: "co-founder/data analyst",
+        role: "co-founder",
         imgLink: '/assets/pngs/retro.png'
     },
     {
@@ -47,55 +47,4 @@ export const faqsData = [
     },
 ]
 
-export const beaniesGallery = [
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 2,
-        name: "2",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-    {
-        id: 1,
-        name: "1",
-        imgSrc: "/assets/pngs/gallery/1.png"
-    },
-]
+export const beaniesColorGallery = ["#FF9190", "#FFE67F", "#C4FF8F", "#93F6C0", "#62EDF0", "#A6F6E3","#E9FFD6","#F7E1E1","#C6F7F7","#7EF2F2"]

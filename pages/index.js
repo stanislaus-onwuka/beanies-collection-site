@@ -21,7 +21,7 @@ export default function Home({ team, faqs }) {
         <title>Home | Beanies</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.homepage} style={ mobileMenu ? {transform: 'translateX(-250px)'} : {transform: 'translateX(0)'}}>
+      <div className={styles.homepage} >
         <header>
           <Navigation/>
           <div className={styles.heroContainer} id="home">
@@ -41,7 +41,7 @@ export default function Home({ team, faqs }) {
                 <button className={styles.mintPageUnavailableBtn} onClick={()=>setPopupStatus(true)}>
                   Mint now
                 </button>
-                <p className={styles.mintPrice}>Price : 0.3eth + Gas</p>
+                <p className={styles.mintPrice}>Price : 0.09eth + Gas</p>
               </div>
             </div>
             <div className={styles.heroImg}>
@@ -142,11 +142,11 @@ export default function Home({ team, faqs }) {
               {
                 faqs.map((faq) => {
                   return <Faq 
-                            faq={faq} 
-                            key={ faq.id }
-                            handleToggle={() => handleToggleAccordion(faq.id)}
-                            openFaq={openAccordion === faq.id} 
-                          />
+                    faq={faq} 
+                    key={ faq.id }
+                    handleToggle={() => handleToggleAccordion(faq.id)}
+                    openFaq={openAccordion === faq.id} 
+                  />
                 })
               }
             </div>
@@ -169,7 +169,6 @@ export default function Home({ team, faqs }) {
               </div>
             </div>
 
-
           </section>
         </main>
         {
@@ -178,28 +177,6 @@ export default function Home({ team, faqs }) {
             message="Minting is currently unavailable"
           />
         }
-      </div>
-      <div className={styles.mobileMenuContainer}>
-        <ul className={styles.mobileMenu}>
-          <li className={styles.menuItem}><a href="#home" className={styles.menuItemLink}>Home</a></li>
-          <li className={styles.menuItem}><a href="#the-plan" className={styles.menuItemLink}>The plan</a></li>
-          <li className={styles.menuItem}><a href="#team" className={styles.menuItemLink}>Team</a></li>
-          <li className={styles.menuItem}><a href="#faqs" className={styles.menuItemLink}>FAQS</a></li>
-        </ul>  
-        <div className={styles.socialMediaContainer}>
-          <a className={styles.socialLink} href="https://discord.gg/AQSzuhmz" target="_blank">
-            <img src="/assets/svgs/Discord-mobile.svg" alt="Discord"/>
-          </a>
-          <a className={styles.socialLink} href="https://www.instagram.com/wearebeanies/" target="_blank">
-            <img src="/assets/svgs/Instagram-mobile.svg" alt="Instagram"/>
-          </a>
-          <a className={styles.socialLink} href="https://twitter.com/wearebeanies?s=21" target="_blank">
-            <img src="/assets/svgs/Twitter-mobile.svg" alt="Twitter"/>
-          </a>
-        </div>
-        <button className={styles.unavailableBtn} onClick={()=>setPopupStatus(true)}>
-          Connect Wallet
-        </button>
       </div>
 
     </div>
