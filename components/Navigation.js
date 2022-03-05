@@ -50,10 +50,10 @@ export default function Navigation() {
                     <img src="/assets/pngs/beanie-jester.png" alt="Beanie Jester"/>
                 </div>
                 <ul className={styles.mobileMenu}>
-                    <li className={styles.menuItem}><a href="#home" className={styles.menuItemLink}>Home</a></li>
-                    <li className={styles.menuItem}><a href="#the-plan" className={styles.menuItemLink}>The plan</a></li>
-                    <li className={styles.menuItem}><a href="#team" className={styles.menuItemLink}>Team</a></li>
-                    <li className={styles.menuItem}><a href="#faqs" className={styles.menuItemLink}>FAQS</a></li>
+                    <li className={styles.menuItem} onClick={()=>showMobileMenu(false)}><a href="#home" className={styles.menuItemLink}>Home</a></li>
+                    <li className={styles.menuItem} onClick={()=>showMobileMenu(false)}><a href="#the-plan" className={styles.menuItemLink}>The plan</a></li>
+                    <li className={styles.menuItem} onClick={()=>showMobileMenu(false)}><a href="#team" className={styles.menuItemLink}>Team</a></li>
+                    <li className={styles.menuItem} onClick={()=>showMobileMenu(false)}><a href="#faqs" className={styles.menuItemLink}>FAQS</a></li>
                 </ul>  
                 <div className={styles.socialMediaContainer}>
                     <a className={styles.socialLink} href="https://discord.gg/AQSzuhmz" target="_blank">

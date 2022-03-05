@@ -41,7 +41,7 @@ export default function Home({ team, faqs }) {
                 <button className={styles.mintPageUnavailableBtn} onClick={()=>setPopupStatus(true)}>
                   Mint now
                 </button>
-                <p className={styles.mintPrice}>Price : 0.09eth + Gas</p>
+                <p className={styles.mintPrice}>Price : 0.2eth + Gas</p>
               </div>
             </div>
             <div className={styles.heroImg}>
@@ -78,7 +78,7 @@ export default function Home({ team, faqs }) {
                 <div className={styles.plan}>
                   <h3 className={styles.planTitle}>Society</h3>
                   <p className={styles.planSubtitle}>
-                    Through the community’s support, more beanies will become sentient and our holders will be whitelisted in the expansion  of the collection.
+                    Through the community`s support, more beanies will become sentient and our holders will be whitelisted in the expansion  of the collection.
                     A charity pledged to aid the improvement of food security in Africa aimed at childeren wil be set up to give back and make a positive change.
                   </p>
                 </div>
