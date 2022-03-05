@@ -1,3 +1,5 @@
+@import './lib/breakpoints.scss';
+
 .popupContainer{
     display: block;
     position: fixed;
@@ -23,6 +25,15 @@
         left: 50%;
         transform: translate(-50%, 0);
 
+        @include media('<phone'){
+            max-width: 250px;
+        }
+
+        @include media('>=phone', '<tablet'){
+            max-width: 300px;
+            padding: 1.3rem;       
+        }
+
         .closePopupBtn{
             align-self: flex-end;
             background: none;
@@ -34,6 +45,16 @@
             margin: 3rem 0 6rem 0;
             text-align: center;
             align-self: center;
+
+            @include media('<phone'){
+                margin: 3rem 0 4rem 0;
+
+            }
+    
+            @include media('>=phone', '<tablet'){
+                margin: 3rem 0 4.5rem 0;
+       
+            }
         }
 
     }

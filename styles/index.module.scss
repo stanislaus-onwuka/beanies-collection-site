@@ -851,6 +851,8 @@
                                 font-size: 18px;
                                 line-height: 25px;
                                 padding: 1rem 2rem;
+                                border-radius: 8px;
+
                             }
             
                             @include media('>=phone', '<tablet'){
@@ -858,6 +860,7 @@
                                 font-size: 19px;
                                 line-height: 25px;  
                                 padding: 1rem 2rem;
+                                border-radius: 8px;
 
                             }
                         }
