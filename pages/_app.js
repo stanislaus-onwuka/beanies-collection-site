@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '@styles/globals.css'
 import Layout from '@components/Layout'
 import AppContext from '../state/AppContext'
+import { Toaster } from 'react-hot-toast';
 
 function Application({ Component, pageProps }) {
 
@@ -35,6 +36,11 @@ function Application({ Component, pageProps }) {
   return (
     <AppContext.Provider value={appState}>
       <Layout>
+        <Toaster
+          toastOptions={{
+            duration: 2000,
+          }}
+        />
         <Component {...pageProps} />
       </Layout>
     </AppContext.Provider>

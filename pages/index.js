@@ -8,11 +8,19 @@ import Faq from '@components/Faq'
 import Gallery from '@components/Gallery'
 import Popup from '@components/Popup'
 import AppContext from '../state/AppContext'
+import toast from 'react-hot-toast';
 
 export default function Home({ team, faqs }) {
   const value = useContext(AppContext);
   const { openAccordion, popupStatus, mobileMenu } = value.state;
   const { handleToggleAccordion, setPopupStatus } = value;
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    toast("Our Waitlist will be available soon", {
+      icon: '😉'
+    })
+  }
 
 
   return (
@@ -159,7 +167,7 @@ export default function Home({ team, faqs }) {
               <div className={styles.waitingListFormContainer}>
                 <h2 className={styles.waitingListFormTitle}>Join our waiting list</h2>
                 <p className={styles.waitingListFormSubtitle}>To stay updated on new information about the collection. Join our mailing list.</p>
-                <form className={styles.waitingListForm}>
+                <form className={styles.waitingListForm} onSubmit={onSubmit}>
                   <input type="text" name="waiting-list-input" placeholder='Enter your email address' className={styles.waitingListInput} required />
                   <input type="submit" value="Submit" className={styles.waitingListFormSubmitBtn} />
                 </form>
