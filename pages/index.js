@@ -28,11 +28,11 @@ export default function Home({ team, faqs }) {
             <div className={styles.hero}>
               <h2 className={styles.heroTitle}>THE BEANIES ORIGIN</h2>
               <div className={styles.heroParagraphs}>
-                <p>A scientist who tries to give his jellybean flavours more “life” accidentally grants them sentience, unknown to him. 96 beanies escape the jar and escape into the metaverse on a quest to form their own society. Along with their sentience, the beanies developed rare attributes that gave them humanoid forms.</p>
+                <p>A scientist who tries to give his jellybean flavours more “life” accidentally grants them sentience, unknown to him. 256 beanies escape the jar and escape into the metaverse on a quest to form their own society. Along with their sentience, the beanies developed rare attributes that gave them humanoid forms.</p>
                 <p>The beanies might return to make all the jellybeans in the universe “life”, who knows?</p>
               </div>
               <p className={styles.heroParagraphMobile}>
-                96 beanies escape their jar to form a society in the metaverse. They might return to form a beanieverse.
+                256 beanies escape their jar to form a society in the metaverse. They might return to form a beanieverse.
               </p>
               <div className={styles.mintInfoContainer}>
                 {/* <div className={styles.mintPageBtn}>
@@ -116,7 +116,7 @@ export default function Home({ team, faqs }) {
                     <h3 className={styles.planTitle}>Society</h3>
                     <p className={styles.planSubtitle}>
                       Through the community’s support, more beanies will become sentient and our holders will be whitelisted in the expansion  of the collection.
-                      A charity pledged to aid the improvement of food security in Africa aimed at childeren wil be set up to give back and make a positive change.
+                      A charity pledged to aid the improvement of food security in Africa aimed at children wil be set up to give back and make a positive change.
                     </p>
                   </div>
                 </div>
