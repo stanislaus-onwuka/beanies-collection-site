@@ -34,6 +34,7 @@
             text-align: center;
             color: #D8FFB7;
             text-transform: capitalize;
+            max-width: 320px;
 
             
             @include media('<phone'){

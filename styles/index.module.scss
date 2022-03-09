@@ -5,17 +5,7 @@
     flex-direction: row;
 
     .homepage{
-        position: relative;
-        z-index: 1;
-        transition: 0.3s;
         background-color: #0F6152;
-
-
-        @include media('>=custom-view-1'){
-            transform: translateX(0) !important;
-        }
-        
-
     }
     
     header{
@@ -23,7 +13,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin-top: 4rem;
+            margin-top: 3rem;
             padding: 3rem;
 
             @include media('<phone'){
@@ -64,8 +54,8 @@
                 .heroTitle{
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 56px;
-                    line-height: 60px;
+                    font-size: 64px;
+                    line-height: 80px;
                     color: #D8FFB7;
 
                     @include media('<phone'){
@@ -102,7 +92,7 @@
                     p{
                         font-weight: normal;
                         font-size: 24px;
-                        line-height: 45px;
+                        line-height: 34px;
                         color: #FFFFFF;
                         margin: 1.5rem 0;
 
@@ -271,13 +261,13 @@
             .heroImg{
                 display: block;
                 position: relative;
-                max-width: 450px;
+                max-width: 400px;
                 background: #99FFD3;
-                border: 10px solid #000000;
+                border: 5px solid #000000;
                 box-sizing: border-box;
                 border-radius: 24px;
                 width: 100%;
-                max-height: 512px;
+                max-height: 400px;
 
                 @include media('<phone'){
                     position: unset;
@@ -407,8 +397,8 @@
                 .planSubtitle{
                     font-style: normal;
                     font-weight: normal;
-                    font-size: 18px;
-                    line-height: 28px;
+                    font-size: 20px;
+                    line-height: 32px;
                     color: #FFFFFF;
                     margin: 0.5rem 0;
                     width: 100%;
@@ -450,7 +440,7 @@
                 }
 
                 .jarOfBeansContainer{
-                    min-width: 450px;
+                    min-width: 445px;
                     margin: 0 1.5rem;
 
                     @include media('<phone'){
@@ -861,6 +851,8 @@
                                 font-size: 18px;
                                 line-height: 25px;
                                 padding: 1rem 2rem;
+                                border-radius: 8px;
+
                             }
             
                             @include media('>=phone', '<tablet'){
@@ -868,6 +860,7 @@
                                 font-size: 19px;
                                 line-height: 25px;  
                                 padding: 1rem 2rem;
+                                border-radius: 8px;
 
                             }
                         }
@@ -900,71 +893,3 @@
     }
 }
 
-.mobileMenuContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 0;
-    right: 0;
-    padding: 1.5rem 2.5rem;
-    height: 100%;
-
-    .mobileMenu{
-        list-style: none;
-        margin: 1.5rem 0;
-
-        .menuItem{
-            margin: 1.5rem 0;
-
-            .menuItemLink{
-                font-style: normal;
-                font-weight: 500;
-                font-size: 28px;
-                line-height: 40px;
-                color: #0F6152;
-                text-decoration: none;
-                text-transform: uppercase;
-                transition: 0.3s;
-                white-space: nowrap;
-
-                @include media('<phone'){
-                    font-size: 24px;
-                    line-height: 36px;
-                }
-
-                @include media('>phone','<custom-view'){
-                    font-size: 30px;
-                    line-height: 40px;
-                }
-
-                &:hover{
-                    color: #FA8029;
-                }
-            }
-        }
-    }
-
-    .socialMediaContainer{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .socialLink{
-            margin: 0 0.5rem;
-        }
-    }
-
-    .unavailableBtn{
-        border: none;
-        padding: 0.8rem 1.5rem;
-        background: #FA8029;
-        border-radius: 8px;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 30px;
-        color: #FFFFFF;
-        white-space: nowrap;
-        cursor: pointer;
-    }
-}

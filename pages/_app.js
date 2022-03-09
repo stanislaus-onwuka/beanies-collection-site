@@ -5,6 +5,7 @@ import AlertTemplate from 'react-alert-template-basic';
 import '@styles/globals.css'
 import Layout from '@components/Layout'
 import AppContext from '../state/AppContext'
+import { Toaster } from 'react-hot-toast';
 
 function Application({ Component, pageProps }) {
 
@@ -38,10 +39,15 @@ function Application({ Component, pageProps }) {
   return (
     <AppContext.Provider value={appState}>
       <Layout>
-      <AlertProvider template={AlertTemplate} timeout={3000}>
-      <WalletProvider>
-        <Component {...pageProps} />
-        </WalletProvider>
+        <AlertProvider template={AlertTemplate} timeout={3000}>
+          <WalletProvider>
+          <Toaster
+            toastOptions={{
+              duration: 2000,
+            }}
+          />
+          <Component {...pageProps} />
+          </WalletProvider>
         </AlertProvider>
       </Layout>
     </AppContext.Provider>

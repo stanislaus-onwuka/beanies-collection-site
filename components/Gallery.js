@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import styles from '@styles/gallery.module.scss';
-import BeanieProfile from './BeanieProfile';
+import BeanieProfile from '@components/BeanieProfile';
+import { beaniesColorGallery } from '../data'
 
 export default function Gallery() {
 
@@ -29,54 +30,54 @@ export default function Gallery() {
         <div className={styles.gallery}>
             <div className={styles.galleryGrid}>
                 <div className={styles.galleryColumnOne}>
-                    <BeanieProfile beanieId={shuffledBeanieList[0]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[0]} beanieBg={beaniesColorGallery[0]} />
                 </div>
                 <div className={styles.galleryColumnTwo}>
-                    <BeanieProfile beanieId={shuffledBeanieList[1]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[2]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[1]} beanieBg={beaniesColorGallery[1]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[2]} beanieBg={beaniesColorGallery[2]}/>
                 </div>
                 <div className={styles.galleryColumnThree}>
-                    <BeanieProfile beanieId={shuffledBeanieList[3]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[4]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[3]} beanieBg={beaniesColorGallery[3]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[4]} beanieBg={beaniesColorGallery[4]} />
                 </div>
             </div>
             <div className={styles.galleryGrid}>
                 <div className={styles.galleryColumnOne}>
-                    <BeanieProfile beanieId={shuffledBeanieList[5]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[5]} beanieBg={beaniesColorGallery[5]} />
                 </div>
                 <div className={styles.galleryColumnTwo}>
-                    <BeanieProfile beanieId={shuffledBeanieList[6]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[7]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[6]} beanieBg={beaniesColorGallery[6]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[7]} beanieBg={beaniesColorGallery[7]} />
                 </div>
                 <div className={styles.galleryColumnThree}>
-                    <BeanieProfile beanieId={shuffledBeanieList[8]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[9]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[8]} beanieBg={beaniesColorGallery[8]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[9]} beanieBg={beaniesColorGallery[9]} />
                 </div>
             </div>
             <div className={styles.galleryGrid}>
                 <div className={styles.galleryColumnOne}>
-                    <BeanieProfile beanieId={shuffledBeanieList[0]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[0]} beanieBg={beaniesColorGallery[0]} />
                 </div>
                 <div className={styles.galleryColumnTwo}>
-                    <BeanieProfile beanieId={shuffledBeanieList[1]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[2]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[1]} beanieBg={beaniesColorGallery[1]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[2]} beanieBg={beaniesColorGallery[2]} />
                 </div>
                 <div className={styles.galleryColumnThree}>
-                    <BeanieProfile beanieId={shuffledBeanieList[3]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[4]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[3]} beanieBg={beaniesColorGallery[3]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[4]} beanieBg={beaniesColorGallery[4]} />
                 </div>
             </div>
             <div className={styles.galleryGrid}>
                 <div className={styles.galleryColumnOne}>
-                    <BeanieProfile beanieId={shuffledBeanieList[5]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[5]} beanieBg={beaniesColorGallery[5]} />
                 </div>
                 <div className={styles.galleryColumnTwo}>
-                    <BeanieProfile beanieId={shuffledBeanieList[6]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[7]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[6]} beanieBg={beaniesColorGallery[6]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[7]} beanieBg={beaniesColorGallery[7]} />
                 </div>
                 <div className={styles.galleryColumnThree}>
-                    <BeanieProfile beanieId={shuffledBeanieList[8]} />
-                    <BeanieProfile beanieId={shuffledBeanieList[9]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[8]} beanieBg={beaniesColorGallery[8]} />
+                    <BeanieProfile beanieId={shuffledBeanieList[9]} beanieBg={beaniesColorGallery[9]}/>
                 </div>
             </div>
         </div>
