@@ -5,7 +5,7 @@ export default function Layout ({children}) {
     return (
         <>
             {children}
-            <Footer/>
+           {/*} <Footer/>*/}
         </>  
     )
 }

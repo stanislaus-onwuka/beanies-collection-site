@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import  WalletProvider  from "../state/Wallet";
+import { Provider as AlertProvider } from "react-alert";
+import AlertTemplate from 'react-alert-template-basic';
 import '@styles/globals.css'
 import Layout from '@components/Layout'
 import AppContext from '../state/AppContext'
@@ -36,12 +39,16 @@ function Application({ Component, pageProps }) {
   return (
     <AppContext.Provider value={appState}>
       <Layout>
-        <Toaster
-          toastOptions={{
-            duration: 2000,
-          }}
-        />
-        <Component {...pageProps} />
+        <AlertProvider template={AlertTemplate} timeout={3000}>
+          <WalletProvider>
+          <Toaster
+            toastOptions={{
+              duration: 2000,
+            }}
+          />
+          <Component {...pageProps} />
+          </WalletProvider>
+        </AlertProvider>
       </Layout>
     </AppContext.Provider>
 

@@ -8,6 +8,7 @@ import Faq from '@components/Faq'
 import Gallery from '@components/Gallery'
 import Popup from '@components/Popup'
 import AppContext from '../state/AppContext'
+import Footer from '@components/Footer'
 import toast from 'react-hot-toast';
 
 export default function Home({ team, faqs }) {
@@ -185,8 +186,8 @@ export default function Home({ team, faqs }) {
             message="Minting is currently unavailable"
           />
         }
+         <Footer/>
       </div>
-
     </div>
   )
 }

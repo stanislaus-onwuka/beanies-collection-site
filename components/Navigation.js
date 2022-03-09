@@ -1,9 +1,10 @@
 import { useContext } from 'react'
 import AppContext from '../state/AppContext'
 // import Link from 'next/link'
+import WalletButton from "../components/walletButton";
 import styles from '@styles/navigation.module.scss'
 
-export default function Navigation() {
+export default function Navigation({wallet}) {
     const value = useContext(AppContext);
     const { setPopupStatus, showMobileMenu } = value;
     const { mobileMenu } = value.state;
@@ -35,9 +36,12 @@ export default function Navigation() {
                 {/* <div className={styles.connectWalletBtn}>
                     <Link href="/mint">Connect Wallet</Link>
                 </div> */}
-                <button className={styles.unavailableBtn} onClick={()=>setPopupStatus(true)}>
+                {/*<button className={styles.unavailableBtn} onClick={()=>setPopupStatus(true)}>
                     Connect Wallet
-                </button>
+                </button>*/}
+                <div>
+                <WalletButton />
+                </div>
             </div>
             <button className={ styles.mobileMenuBtn} onClick={()=>showMobileMenu(true)}>
                 <img src='/assets/svgs/menu.svg' alt="Close button" />
