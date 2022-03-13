@@ -2,15 +2,15 @@ import Head from 'next/head'
 import styles from '../../styles/mintpage.module.scss'
 import { useState, useContext } from "react";
 import Web3 from "web3";
-import Image from "next/image";
 import { useAlert } from "react-alert";
 //import BeaniesABI from "../artifacts/BeaniesABI.json";
 import Counter from "../../components/counter";
 import MintHeader from "../../components/MintHeader";
 import { WalletContext } from "../../state/Wallet";
-import Beanies1 from "../../public/assets/svgs/list-icons/cherry_bean_1.svg";
-import Beanies2 from "../../public/assets/svgs/list-icons/cherry_bean_2.svg";
-
+import { beaniesGallery } from '../../data'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 export default function Mint() {
@@ -63,6 +63,44 @@ export default function Mint() {
             });
     };
 
+    // Slider settings
+    const fadeSliderWithoutBtnsSettings = {
+        dots: false,
+        fade: true,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        swipeToSlide: true,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
+    };
+
+    function NextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "none"}}
+            onClick={onClick}
+          />
+        );
+    }
+      
+    function PrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+            className={className}
+            style={{ ...style, display: "none"}}
+            onClick={onClick}
+            />
+        );
+    }
+
     const mint = (provider, address) => {
         if (amountToMint > 0 && provider && address) {
             initMint(provider, address);
@@ -81,55 +119,50 @@ export default function Mint() {
     return (
         <>
             <Head>
-                <title>Mint Beanies | Beanies</title>
+                <title>Mint Page | Beanies</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MintHeader wallet />
             <div className={styles.container}>
-
-                <section className={styles.section}>
-                    <h1>Escape the jar</h1>
-                    <div className={styles.counterWrapper}>
-                        {/*<div className={styles.imageWrapper}>
-                            <Image
-                                priority
-                                layout="fill"
-                                className={styles.Beanie}
-                                src={Beanies1}
-                                alt="Beanie"
-                            />
-                        </div>*/}
-                        <div>
-                            {/*<p>
-                                MINT PRICE OF {Web3.utils.fromWei(String(COLLECTION_PRICE))} ETH
-                            </p>*/}
-                            <Counter
-                                onIncrement={onIncrement}
-                                onDecrement={onDecrement}
-                                amountToMint={amountToMint}
-                            />
-                            <button
-                                onClick={() => {
-                                    mint(provider, walletAddress);
-                                }}
-                                className={`${styles.mintBtn} ${amountToMint > 0 && styles.active}`}
-                            >
-                                MINT
-                            </button>
-                            {/*<p>MINT MAX OF 3</p>*/}
-                        </div>
-                       {/*<div className={styles.imageWrapper}>
-                            <Image
-                                priority
-                                layout="fill"
-                                className={styles.Beanie}
-                                src={Beanies2}
-                                alt="Beanie2"
-                            />
-                            </div>*/}
+                <div className={styles.beaniesSliderContainer}>
+                    <div className={styles.imageSliderWrapper}>
+                        <Slider {...fadeSliderWithoutBtnsSettings}>
+                            {
+                                beaniesGallery.map((beanie,idx) => {
+                                    return (
+                                        <div key={idx} className={styles.imageSlide}>
+                                            <img src={beanie.src} alt={ beanie.name }/>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </Slider>
                     </div>
-                </section>
+                    <div className={styles.beaniesSliderText}>
+                        <h3 className={styles.beaniesSliderTitle}>Join the beanies party</h3>
+                        <p className={styles.beaniesSliderSubtitle}>MINT YOUR  BEANIE FOR 0.2 ETH + Gas fees</p>
+                    </div>
+                </div>
 
+                <div className={styles.counterWrapper}>
+                    {/*<p>
+                        MINT PRICE OF {Web3.utils.fromWei(String(COLLECTION_PRICE))} ETH
+                    </p>*/}
+                    <Counter
+                        onIncrement={onIncrement}
+                        onDecrement={onDecrement}
+                        amountToMint={amountToMint}
+                    />
+                    <button
+                        onClick={() => {
+                            mint(provider, walletAddress);
+                        }}
+                        className={`${styles.mintBtn} ${amountToMint > 0 && styles.active}`}
+                    >
+                        MINT
+                    </button>
+                    <p className={styles.mintInfo}>mint max is 3</p>
+                </div>
             </div>
         </>
 

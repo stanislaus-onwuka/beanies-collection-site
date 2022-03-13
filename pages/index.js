@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 import styles from '@styles/index.module.scss'
 import Navigation from '@components/Navigation'
@@ -44,12 +45,12 @@ export default function Home({ team, faqs }) {
                 256 beanies escape their jar to form a society in the metaverse. They might return to form a beanieverse.
               </p>
               <div className={styles.mintInfoContainer}>
-                {/* <div className={styles.mintPageBtn}>
+                <div className={styles.mintPageBtn}>
                   <Link href="/mint">Mint now</Link>
-                </div> */}
-                <button className={styles.mintPageUnavailableBtn} onClick={()=>setPopupStatus(true)}>
+                </div>
+                {/* <button className={styles.mintPageUnavailableBtn} onClick={()=>setPopupStatus(true)}>
                   Mint now
-                </button>
+                </button> */}
                 <p className={styles.mintPrice}>Price : 0.2eth + Gas</p>
               </div>
             </div>

@@ -6,11 +6,13 @@ const Counter = ({ amountToMint, onIncrement, onDecrement }) => {
   return (
     <div className={styles.container}>
       <div onClick={onDecrement} className={styles.decrement}>
-        <HiMinusCircle />
+        {/* <HiMinusCircle /> */}
+        -
       </div>
       <p>{amountToMint}</p>
       <div onClick={onIncrement} className={styles.increment}>
-        <HiPlusCircle />
+        {/* <HiPlusCircle /> */}
+        +
       </div>
     </div>
   );
