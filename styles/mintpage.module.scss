@@ -1,63 +1,90 @@
 .container {
-    padding-right: 18px;
-    padding-left: 18px;
-    text-align: center;
+  padding: 2rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 450px;
+
+
+  .beaniesSliderContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding-top: 180px;
-  
-  
-    @media screen and (max-width: 320px) {
-      padding-top: 250px;
-    }
-  
-    @media screen and (min-width: 769px) {
-      padding-top: 120px;
-    }
-  
-    h1 { 
-      font-size: 22px;
-    }
-    .section {
-      margin-top: 100px;
-    }
-    .mintBtn {
-      width: 200px;
-      height: 60px;
-      background-color: #052901;
-      border-width: 0px;
-      color: white;
-      font-size: 24px;
-    }
-  
-    .mintBtn.active {
-      background-color: #0C6C01;
-      cursor: pointer;
-    }
-  
-    .counterWrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 1.5rem;
+
+    .imageSliderWrapper{
+      max-width: 400px;
       width: 100%;
-  
-      @media screen and (min-width: 769px) {
-        justify-content: space-between;
+
+      .imageSlide{
+        max-width: 350px;
+        border: 8px solid rgba(35, 31, 32, 0.9);
+        border-radius: 24px;
+        background: #D8FFB7;
+
+        img{
+          width: 100%;
+        }
+
       }
     }
-  
-    .imageWrapper {
-      display: none;
-  
-      @media screen and (min-width: 769px) {
-        display: flex;
-        height: 200px;
-        min-height: 100%;
-        width: 100%;
-        position: relative;
+
+    .beaniesSliderText{
+      width: 100%;
+      max-width: 495px;
+      margin-top: 2rem;
+
+      .beaniesSliderTitle{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 51px;
+        text-transform: uppercase;
+        color: #231F20;
+      }
+
+      .beaniesSliderSubtitle{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #7A7A7A;
       }
     }
   }
+
+  .mintBtn {
+    width: 100%;
+    padding: 1rem 0.6rem;
+    background-color: #a0a1a0;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 22px;
+  }
+
+  .mintBtn.active {
+    background-color: #FA8029;
+    cursor: pointer;
+  }
+
+  .mintInfo{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 1.5rem;
+  }
+
+}

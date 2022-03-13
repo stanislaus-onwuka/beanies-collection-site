@@ -47,4 +47,28 @@ export const faqsData = [
     },
 ]
 
-export const beaniesColorGallery = ["#FF9190", "#FFE67F", "#C4FF8F", "#93F6C0", "#62EDF0", "#A6F6E3","#E9FFD6","#F7E1E1","#C6F7F7","#7EF2F2"]
+export const beaniesColorGallery = ["#FF9190", "#FFE67F", "#C4FF8F", "#93F6C0", "#62EDF0", "#A6F6E3", "#E9FFD6", "#F7E1E1", "#C6F7F7", "#7EF2F2"];
+
+export const beaniesGallery = [
+    {
+        name: '0',
+        src: '/assets/pngs/gallery/0.png'
+    },
+    {
+        name: '1',
+        src: '/assets/pngs/gallery/1.png'
+    },
+    {
+        name: '2',
+        src: '/assets/pngs/gallery/2.png'
+    },
+    {
+        name: '3',
+        src: '/assets/pngs/gallery/3.png'
+    },
+    {
+        name: '4',
+        src: '/assets/pngs/gallery/4.png'
+    },
+]
+
